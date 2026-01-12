@@ -2,7 +2,7 @@ const express = require("express"); //crea servidor web
 const sqlite3 = require("sqlite3").verbose(); //trabajar con sqlite + ayuda errores
 
 const app = express(); //nuestro servidor
-const PORT = 3000; 
+const PORT = process.env.PORT || 3000; 
 
 app.use(express.json()); //recibir datos en forma de json
 app.use(express.static("public")); //servir el frontend
